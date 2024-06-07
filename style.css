@@ -1,0 +1,32 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.calculator {
+	margin-top: 10%;
+
+	border: red solid 5px;
+	width: 500px;
+	height: 600px;
+	padding: 20px;
+}
+.display {
+	display: flex;
+	justify-content: end;
+	align-items: end;
+	padding: 10px;
+	margin: auto;
+	height: 200px;
+
+	border: 5px black solid;
+
+	width: 450px;
+}
+.buttons {
+	border: blue 5px solid;
+}
