@@ -39,10 +39,12 @@ console.log(operate(operator, number, otherNum));
 
 button = document.querySelectorAll(".buttons button");
 display = document.querySelector(".display");
+let display_value = "";
 
 for (let i = 0; i < button.length; i++) {
 	button[i].addEventListener("click", function () {
-		display.textContent = this.textContent;
+		display_value = this.textContent;
+		display.textContent = display_value;
 	});
 }
 // button1.addEventListener("click", function () {
