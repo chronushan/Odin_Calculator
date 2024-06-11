@@ -36,3 +36,15 @@ function operate(a, b, c) {
 }
 
 console.log(operate(operator, number, otherNum));
+
+button = document.querySelectorAll(".buttons button");
+display = document.querySelector(".display");
+
+for (let i = 0; i < button.length; i++) {
+	button[i].addEventListener("click", function () {
+		display.textContent = this.textContent;
+	});
+}
+// button1.addEventListener("click", function () {
+// 	display.textContent = this.textContent;
+// });
