@@ -43,7 +43,7 @@ let display_value = "";
 
 for (let i = 0; i < button.length; i++) {
 	button[i].addEventListener("click", function () {
-		display_value = this.textContent;
+		display_value += this.textContent;
 		display.textContent = display_value;
 	});
 }
