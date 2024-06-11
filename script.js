@@ -43,8 +43,16 @@ let display_value = "";
 
 for (let i = 0; i < button.length; i++) {
 	button[i].addEventListener("click", function () {
-		display_value += this.textContent;
-		display.textContent = display_value;
+		if (button[i] == document.querySelector(".clear")) {
+			display_value = "0";
+			display.textContent = display_value;
+		} else {
+			if (display_value == "0") {
+				display_value = "";
+			}
+			display_value += this.textContent;
+			display.textContent = display_value;
+		}
 	});
 }
 // button1.addEventListener("click", function () {
