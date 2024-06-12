@@ -47,8 +47,13 @@ for (let i = 0; i < button.length; i++) {
 			display_value = "0";
 			display.textContent = display_value;
 		} else if (button[i] == document.querySelector(".delete")) {
-			display_value = display_value.slice(0, display_value.length - 1);
-			display.textContent = display_value;
+			if (display_value == "0" || display_value.length == 1) {
+				display_value = "0";
+				display.textContent = display_value;
+			} else {
+				display_value = display_value.slice(0, display_value.length - 1);
+				display.textContent = display_value;
+			}
 		} else {
 			if (display_value == "0") {
 				display_value = "";
