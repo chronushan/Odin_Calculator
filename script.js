@@ -74,27 +74,28 @@ for (let i = 0; i < button.length; i++) {
 			button[i] == document.querySelector(".divide") ||
 			button[i] == document.querySelector(".modulo")
 		) {
-			operator = button[i].textContent;
+			if (button[i] == document.querySelector(".add")) {
+				operator = button[i].textContent;
 
-			// let number1 = document.createElement("p");
-			// number1.setAttribute("class", "number1");
-			// let operatorSign = document.createElement("p");
-			// operatorSign.setAttribute("class", "operator");
+				document.querySelector(".number1").textContent = number;
+				document.querySelector(".operator").textContent = operator;
+				otherNum = number;
+				number = 0;
+				showed.textContent = number;
+			} else {
+				operator = button[i].textContent;
 
-			// number1.textContent = number;
-			// operatorSign.textContent = operator;
-			document.querySelector(".number1").textContent = number;
-			document.querySelector(".operator").textContent = operator;
-			otherNum = number;
-			number = "0";
-			showed.textContent = number;
-
-			// display.append(operatorSign);
-			// document.querySelector(".display div").append(number1);
-
-			// display.textContent = number + operator;
+				document.querySelector(".number1").textContent = number;
+				document.querySelector(".operator").textContent = operator;
+				otherNum = number;
+				number = 0;
+				showed.textContent = "0";
+			}
 		} else if (button[i] == document.querySelector(".calculate")) {
 			showed.textContent = operate(operator, otherNum, number);
+			document.querySelector(".number1").textContent = "";
+			number = operate(operator, otherNum, number);
+			document.querySelector(".operator").textContent = "";
 		} else {
 			if (number == "0") {
 				number = "";
