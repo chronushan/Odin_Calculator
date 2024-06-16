@@ -3,7 +3,7 @@ let operator = "";
 let otherNum = 0;
 
 function add(a, b) {
-	return parseInt(a) + parseInt(b);
+	return Number(a) + Number(b);
 }
 
 function subtract(a, b) {
