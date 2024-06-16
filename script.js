@@ -85,6 +85,8 @@ for (let i = 0; i < button.length; i++) {
 			// operatorSign.textContent = operator;
 			document.querySelector(".number1").textContent = number;
 			document.querySelector(".operator").textContent = operator;
+			number = "0";
+			showed.textContent = number;
 
 			// display.append(operatorSign);
 			// document.querySelector(".display div").append(number1);
