@@ -3,7 +3,7 @@ let operator = "";
 let otherNum = 0;
 
 function add(a, b) {
-	return a + b;
+	return parseInt(a) + parseInt(b);
 }
 
 function subtract(a, b) {
@@ -85,6 +85,7 @@ for (let i = 0; i < button.length; i++) {
 			// operatorSign.textContent = operator;
 			document.querySelector(".number1").textContent = number;
 			document.querySelector(".operator").textContent = operator;
+			otherNum = number;
 			number = "0";
 			showed.textContent = number;
 
@@ -93,7 +94,7 @@ for (let i = 0; i < button.length; i++) {
 
 			// display.textContent = number + operator;
 		} else if (button[i] == document.querySelector(".calculate")) {
-			otherNum = d;
+			showed.textContent = operate(operator, otherNum, number);
 		} else {
 			if (number == "0") {
 				number = "";
